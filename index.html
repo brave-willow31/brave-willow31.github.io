@@ -1,0 +1,1289 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>研究所导航在线入口-科研机构与实验室官方入口索引</title>
+<meta name="description" content="研究所导航在线入口收录中科院、社科院及各类实验室官网与研究平台入口，含访问指南、机构分类、开放数据与预约流程解析，帮研究者按领域、地域、隶属关系快速定位官方页面。">
+<meta name="keywords" content="研究所导航在线入口">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3d5c'/%3E%3Cpath d='M32 10 54 34H42v18H22V34H10z' fill='none' stroke='%23f2c14e' stroke-width='3'/%3E%3Ccircle cx='32' cy='44' r='4' fill='%23f2c14e'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "研究所导航在线入口",
+  "description": "科研机构官网与实验室研究平台入口索引",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "中科院各研究所官网入口怎么区分官方与镜像站？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "中科院直属研究所官网域名多以 cas.cn 或其子域结尾，部分研究所使用独立域名并在页面底部标注京ICP备案与机构全称。镜像站通常只保留论文库和人员名单，不提供人才招聘与仪器预约栏目，访问时看是否有中科院院徽和研究所英文全称即可判断。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "国家实验室与全国重点实验室的在线入口有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "国家实验室入口一般挂靠在牵头单位官网下设栏目，页面包含总体研究方向和联合攻关课题；全国重点实验室多数有独立站点，提供年度开放课题申请、学术委员会名单和仪器共享预约。两者在课题申报入口和开放时间上并不相同。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "研究所大型仪器共享平台预约需要什么账号？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多数研究所使用中科院仪器共享管理平台或本所自建预约系统，校内人员用工号登录，外部单位需先提交单位介绍信和课题说明，审核通过后获得临时账号，单次预约周期通常为7到15个工作日。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "研究所开放数据下载入口的数据能直接用于论文吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "开放数据页面通常附带数据使用许可说明，标注CC BY 4.0或仅限非商业研究用途。引用时需按页面给出的推荐格式著录数据集名称、版本号和获取日期，涉及个人健康与地理坐标的数据需另行申请脱敏版本。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "访问境外研究所网站加载缓慢怎么处理？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "境外研究机构站点在国内访问速度受线路影响，可优先使用其镜像数据库或机构知识库入口，论文全文通过 doi 跳转出版社页面。会议注册与人员页面一般可正常打开，视频类内容加载失败不影响信息查询。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "博士生如何通过研究所入口联系意向导师？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "研究所官网的研究队伍栏目通常按课题组列出研究员姓名、办公室电话和邮箱，部分页面提供招生方向与在读学生名单。邮件联系时附上成绩单和研究兴趣说明，回复周期一般在一到两周，招生季前三个月联系成功率更高。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#12212e;
+  --ink-2:#3a4d5e;
+  --ink-3:#66798a;
+  --paper:#f7f5f0;
+  --card:#ffffff;
+  --line:#d8d3c8;
+  --line-soft:#e7e2d8;
+  --brand:#0f3d5c;
+  --brand-2:#155e75;
+  --accent:#c8892a;
+  --accent-soft:#f6e7c8;
+  --ok:#2f6b4f;
+  --warn:#9a3b2e;
+  --radius:10px;
+  --radius-sm:6px;
+  --shadow:0 1px 2px rgba(18,33,46,.06),0 6px 18px rgba(18,33,46,.06);
+  --shadow-hover:0 2px 4px rgba(18,33,46,.08),0 10px 26px rgba(18,33,46,.1);
+  --fs-h1:clamp(1.7rem,3.4vw,2.5rem);
+  --fs-h2:clamp(1.25rem,2.1vw,1.55rem);
+  --fs-h3:1.05rem;
+  --gap:clamp(14px,2vw,24px);
+  --maxw:1180px;
+  --sticky-h:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC","Source Han Serif SC",Georgia,"Microsoft YaHei",serif;
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.01em;
+}
+h1,h2,h3,h4{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.35;margin:0}
+p{margin:0 0 .9em}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+ul,ol{margin:0 0 .9em;padding-left:1.2em}
+li{margin-bottom:.35em}
+img{max-width:100%;display:block}
+button{font:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:.6em 1em;z-index:200}
+.skip:focus{left:8px;top:8px}
+
+/* ============ 吸顶公告条 + 页头 ============ */
+.sticky-shell{position:sticky;top:0;z-index:100}
+.announce{
+  background:var(--brand);
+  color:#e9f1f5;
+  font-size:.82rem;
+  font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif;
+}
+.announce-in{
+  max-width:var(--maxw);margin:0 auto;padding:.45em clamp(12px,3vw,24px);
+  display:flex;gap:.8em;align-items:center;flex-wrap:wrap;
+}
+.announce b{color:var(--accent);font-weight:700;letter-spacing:.04em}
+.announce .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+.announce a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.announce a:hover{color:var(--accent)}
+.announce .ann-right{margin-left:auto;color:#b9cdd8;font-size:.78rem}
+
+.site-header{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.header-in{
+  max-width:var(--maxw);margin:0 auto;padding:.6em clamp(12px,3vw,24px);
+  display:flex;align-items:center;gap:clamp(10px,2vw,26px);
+}
+.brand{display:flex;align-items:center;gap:.6em;flex:none}
+.brand svg{width:36px;height:36px;flex:none}
+.brand-txt{font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif;font-weight:800;font-size:1.02rem;color:var(--brand);letter-spacing:.02em;line-height:1.15}
+.brand-sub{display:block;font-size:.66rem;font-weight:500;color:var(--ink-3);letter-spacing:.14em}
+
+.nav-toggle{
+  display:none;margin-left:auto;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:.4em .7em;cursor:pointer;color:var(--brand);
+}
+.nav-toggle svg{width:20px;height:20px;vertical-align:middle}
+.main-nav{flex:1;min-width:0}
+.main-nav ul{
+  list-style:none;display:flex;gap:clamp(2px,1.1vw,14px);margin:0;padding:0;flex-wrap:wrap;
+  font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif;font-size:.9rem;
+}
+.main-nav a{color:var(--ink-2);padding:.35em .2em;display:inline-block;border-bottom:2px solid transparent}
+.main-nav a:hover{color:var(--brand);border-bottom-color:var(--accent);text-decoration:none}
+.header-tools{display:flex;gap:.5em;align-items:center;flex:none}
+.search-wrap{position:relative}
+.search-wrap input{
+  width:clamp(150px,20vw,220px);
+  border:1px solid var(--line);border-radius:999px;background:#fbfaf6;
+  padding:.42em .9em .42em 2.1em;font-size:.85rem;color:var(--ink);
+  font-family:"Noto Sans SC",system-ui,sans-serif;
+}
+.search-wrap input:focus{outline:2px solid var(--brand-2);outline-offset:1px;border-color:var(--brand-2)}
+.search-wrap .s-ico{position:absolute;left:.7em;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--ink-3);pointer-events:none}
+.search-feedback{
+  position:absolute;top:calc(100% + 6px);right:0;width:min(300px,86vw);
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);
+  box-shadow:var(--shadow);padding:.6em .8em;font-size:.82rem;color:var(--ink-2);
+  display:none;z-index:120;font-family:"Noto Sans SC",system-ui,sans-serif;
+}
+.search-feedback.show{display:block}
+.search-feedback strong{color:var(--warn)}
+.search-feedback ul{margin:.4em 0 0;padding-left:1.1em}
+.search-feedback a{font-size:.82rem}
+.btn{
+  display:inline-block;font-family:"Noto Sans SC","PingFang SC",system-ui,sans-serif;
+  font-size:.88rem;font-weight:600;padding:.5em 1.05em;border-radius:999px;
+  border:1px solid transparent;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--brand-2);box-shadow:var(--shadow-hover)}
+.btn-ghost{background:#fff;color:var(--brand);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--brand-2);color:var(--brand-2)}
+
+/* ============ 首屏 ============ */
+.hero{
+  max-width:var(--maxw);margin:0 auto;padding:clamp(18px,3.4vw,42px) clamp(12px,3vw,24px);
+  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(18px,3vw,40px);
+  align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.5em;
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.78rem;font-weight:700;
+  color:var(--brand-2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:.7em;
+}
+.hero-eyebrow::before{content:"";width:22px;height:2px;background:var(--accent)}
+.hero h1{font-size:var(--fs-h1);font-weight:800;color:var(--brand);letter-spacing:.01em;margin-bottom:.45em}
+.hero-lead{font-size:1rem;color:var(--ink-2);max-width:36em;margin-bottom:1em}
+.hero-lead b{color:var(--ink);font-weight:700}
+.hero-actions{display:flex;gap:.6em;flex-wrap:wrap;margin-bottom:1.2em}
+.hero-stats{
+  display:flex;gap:clamp(14px,2.4vw,30px);flex-wrap:wrap;
+  border-top:1px solid var(--line);padding-top:.9em;
+}
+.hero-stats div{font-family:"Noto Sans SC",system-ui,sans-serif}
+.hero-stats .num{font-size:1.35rem;font-weight:800;color:var(--brand);line-height:1.1;display:block}
+.hero-stats .lbl{font-size:.76rem;color:var(--ink-3);letter-spacing:.03em}
+
+.hero-visual{position:relative;min-height:300px;display:flex;align-items:center;justify-content:center}
+.hero-visual svg{width:100%;height:auto;max-width:460px;filter:drop-shadow(0 10px 24px rgba(15,61,92,.12))}
+
+/* ============ 通用区块 ============ */
+.section{max-width:var(--maxw);margin:0 auto;padding:clamp(22px,3.2vw,40px) clamp(12px,3vw,24px);scroll-margin-top:calc(var(--sticky-h) + 12px)}
+.section-head{margin-bottom:clamp(14px,2vw,22px);border-bottom:1px solid var(--line);padding-bottom:.7em}
+.section-head .kicker{
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.74rem;font-weight:700;
+  letter-spacing:.16em;color:var(--accent);text-transform:uppercase;display:block;margin-bottom:.25em;
+}
+.section-head h2{font-size:var(--fs-h2);color:var(--brand);font-weight:800}
+.section-head p{color:var(--ink-3);font-size:.88rem;margin:.4em 0 0;max-width:52em}
+.section-head h2 + p{margin-top:.35em}
+
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 296px;gap:clamp(18px,2.6vw,36px);align-items:start}
+.main-col{min-width:0}
+.side-col{min-width:0;display:flex;flex-direction:column;gap:var(--gap)}
+
+/* 卡片网格 */
+.grid{display:grid;gap:var(--gap)}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{
+  background:var(--card);border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:clamp(14px,1.8vw,20px);box-shadow:var(--shadow);
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--line)}
+.card h3{font-size:var(--fs-h3);color:var(--brand);margin-bottom:.4em}
+.card h3 a{color:inherit}
+.card p{font-size:.9rem;color:var(--ink-2);margin-bottom:.7em}
+.card .meta{
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.74rem;color:var(--ink-3);
+  margin-top:auto;letter-spacing:.02em;display:flex;gap:.6em;flex-wrap:wrap;align-items:center;
+}
+.tag{
+  display:inline-block;font-family:"Noto Sans SC",system-ui,sans-serif;
+  font-size:.72rem;padding:.12em .6em;border-radius:999px;background:var(--accent-soft);
+  color:#7a5210;font-weight:600;white-space:nowrap;
+}
+.tag-blue{background:#e2eef3;color:#134a63}
+.tag-green{background:#e0efe6;color:var(--ok)}
+.tag-warn{background:#f7e2de;color:var(--warn)}
+
+/* 紧凑列表 */
+.list-tight{list-style:none;padding:0;margin:0}
+.list-tight li{
+  display:grid;grid-template-columns:5.6em minmax(0,1fr);gap:.8em;
+  padding:.6em 0;border-bottom:1px dashed var(--line-soft);align-items:baseline;
+}
+.list-tight li:last-child{border-bottom:none}
+.list-tight time{
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.76rem;color:var(--ink-3);
+  letter-spacing:.03em;white-space:nowrap;
+}
+.list-tight .li-title{font-size:.93rem;color:var(--ink);font-weight:600}
+.list-tight .li-title a{color:inherit}
+.list-tight .li-sum{font-size:.82rem;color:var(--ink-3);display:block;font-weight:400;margin-top:.15em}
+
+/* 编号步骤 */
+.steps{counter-reset:st;list-style:none;padding:0;margin:0;display:grid;gap:.8em}
+.steps li{
+  counter-increment:st;position:relative;background:var(--card);border:1px solid var(--line-soft);
+  border-radius:var(--radius);padding:.9em 1em .9em 3.2em;font-size:.9rem;color:var(--ink-2);
+}
+.steps li::before{
+  content:counter(st);position:absolute;left:.8em;top:.85em;
+  width:1.7em;height:1.7em;border-radius:50%;background:var(--brand);color:#fff;
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.8rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.steps b{color:var(--ink);font-weight:700}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.compare > div{padding:1em 1.1em}
+.compare .cmp-head{
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:700;font-size:.9rem;
+  background:var(--brand);color:#fff;letter-spacing:.04em;
+}
+.compare .cmp-head.alt{background:var(--accent);color:#3a2703}
+.compare .row{display:contents}
+.compare .cell{border-top:1px solid var(--line-soft);font-size:.86rem;color:var(--ink-2)}
+.compare .cell:nth-child(4n+1){background:#fbfaf6}
+.compare .cell strong{color:var(--ink);font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.83rem;display:block;margin-bottom:.15em}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 1em 2em;font-size:.9rem;color:var(--ink-2)}
+.timeline li::before{
+  content:"";position:absolute;left:0;top:.42em;width:16px;height:16px;border-radius:50%;
+  background:#fff;border:3px solid var(--brand-2);
+}
+.timeline time{font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.78rem;color:var(--accent);font-weight:700;display:block;letter-spacing:.03em}
+.timeline b{color:var(--ink)}
+
+/* 标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:.5em}
+.tag-index a{
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.84rem;
+  background:#fff;border:1px solid var(--line);color:var(--ink-2);
+  padding:.34em .85em;border-radius:var(--radius-sm);
+  transition:border-color .18s,color .18s,background .18s;
+}
+.tag-index a:hover{border-color:var(--brand-2);color:var(--brand-2);background:#f2f8fa;text-decoration:none}
+.tag-index a .cnt{color:var(--ink-3);font-size:.74rem;margin-left:.35em}
+
+/* 深度解析 */
+.deep{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(16px,2.4vw,30px);box-shadow:var(--shadow)}
+.deep h2{font-size:var(--fs-h2);color:var(--brand);margin-bottom:.5em}
+.deep h3{font-size:1.08rem;color:var(--brand);margin:1.5em 0 .5em;padding-left:.6em;border-left:4px solid var(--accent)}
+.deep p{font-size:.95rem;color:var(--ink-2)}
+.deep .claim{
+  background:#f2f8fa;border-left:4px solid var(--brand-2);padding:.8em 1em;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.92rem;color:var(--ink);margin:1em 0;
+}
+.deep .claim strong{color:var(--brand)}
+table.data{width:100%;border-collapse:collapse;font-size:.85rem;margin:.8em 0 1.2em;font-family:"Noto Sans SC",system-ui,sans-serif}
+table.data caption{text-align:left;font-size:.8rem;color:var(--ink-3);padding-bottom:.35em}
+table.data th,table.data td{border:1px solid var(--line-soft);padding:.45em .6em;text-align:left;vertical-align:top}
+table.data th{background:#f4f1ea;color:var(--ink);font-weight:700}
+table.data td{color:var(--ink-2)}
+
+/* 引语卡 */
+.quote-card{
+  background:linear-gradient(160deg,#fffdf7,#f6efe0);border:1px solid var(--line);
+  border-radius:var(--radius);padding:clamp(16px,2.2vw,26px);position:relative;
+  font-family:"Noto Serif SC",Georgia,serif;font-size:.98rem;color:var(--ink-2);
+}
+.quote-card::before{
+  content:"“";position:absolute;left:.4em;top:-.15em;font-size:3.4rem;color:var(--accent);opacity:.5;
+  font-family:Georgia,serif;line-height:1;
+}
+.quote-card p{padding-left:1.4em}
+.quote-card .who{
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.78rem;color:var(--ink-3);
+  padding-left:1.4em;margin:0;letter-spacing:.02em;
+}
+
+/* 侧栏 */
+.side-card{background:var(--card);border:1px solid var(--line-soft);border-radius:var(--radius);padding:1em 1.1em;box-shadow:var(--shadow)}
+.side-card h3{
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.92rem;color:var(--brand);
+  margin-bottom:.6em;padding-bottom:.45em;border-bottom:1px solid var(--line-soft);letter-spacing:.02em;
+}
+.side-nav{list-style:none;margin:0;padding:0;font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.88rem}
+.side-nav li{margin:0}
+.side-nav a{
+  display:block;padding:.36em .6em;color:var(--ink-2);border-radius:var(--radius-sm);
+  border-left:3px solid transparent;
+}
+.side-nav a:hover{background:#f2f8fa;color:var(--brand-2);text-decoration:none}
+.side-nav a.active{background:#e2eef3;color:var(--brand);font-weight:700;border-left-color:var(--accent)}
+
+/* FAQ */
+.faq details{
+  background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius);
+  margin-bottom:.65em;box-shadow:var(--shadow);overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:.85em 1.1em;font-family:"Noto Sans SC",system-ui,sans-serif;
+  font-weight:700;font-size:.93rem;color:var(--ink);list-style:none;
+  display:flex;gap:.7em;align-items:baseline;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";color:var(--accent);font-size:1.15rem;font-weight:800;flex:none;line-height:1}
+.faq details[open] summary::before{content:"−"}
+.faq details[open] summary{color:var(--brand);border-bottom:1px dashed var(--line-soft)}
+.faq .faq-body{padding:.8em 1.1em 1em;font-size:.9rem;color:var(--ink-2)}
+.faq .faq-body p:last-child{margin-bottom:0}
+
+/* 评论 */
+.comments{display:grid;gap:var(--gap)}
+.comment{
+  background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:.9em 1.1em;box-shadow:var(--shadow);
+}
+.comment-top{display:flex;gap:.6em;align-items:center;margin-bottom:.35em;flex-wrap:wrap}
+.avatar{
+  width:30px;height:30px;border-radius:50%;background:var(--brand-2);color:#fff;
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.78rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+.avatar.a2{background:var(--accent);color:#3a2703}
+.avatar.a3{background:var(--ok)}
+.avatar.a4{background:#7a5ea8}
+.avatar.a5{background:#9a3b2e}
+.c-name{font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.86rem;font-weight:700;color:var(--ink)}
+.c-meta{font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.74rem;color:var(--ink-3)}
+.comment p{font-size:.9rem;color:var(--ink-2);margin:0}
+.comment p .hl{background:var(--accent-soft);padding:0 .2em;border-radius:3px;color:#5e3f0a}
+
+/* 表格/榜单 */
+.rank{list-style:none;padding:0;margin:0;display:grid;gap:.55em}
+.rank li{
+  display:grid;grid-template-columns:2.1em minmax(0,1fr) auto;gap:.7em;align-items:center;
+  background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:.6em .8em;font-size:.9rem;
+}
+.rank .r-no{
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:800;color:var(--brand);
+  font-size:1rem;text-align:center;
+}
+.rank .r-no.top{color:var(--accent)}
+.rank .r-name b{color:var(--ink);font-weight:700;display:block;font-size:.92rem}
+.rank .r-name span{font-size:.78rem;color:var(--ink-3)}
+.rank .r-val{font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.8rem;color:var(--brand-2);font-weight:700;white-space:nowrap}
+
+/* 补充：可信度分层 */
+.layers{display:grid;gap:.7em}
+.layer{}
+.layer summary{
+  cursor:pointer;list-style:none;display:flex;align-items:center;gap:.6em;
+  font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:700;font-size:.92rem;
+  background:#fff;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:.7em .9em;color:var(--ink);
+}
+.layer summary::-webkit-details-marker{display:none}
+.layer summary::after{content:"▾";margin-left:auto;color:var(--ink-3);transition:transform .18s}
+.layer[open] summary::after{transform:rotate(180deg)}
+.layer .lv-badge{
+  font-size:.72rem;padding:.1em .55em;border-radius:999px;font-weight:700;letter-spacing:.02em;
+}
+.lv-a{background:#e0efe6;color:var(--ok)}
+.lv-b{background:#e2eef3;color:var(--brand-2)}
+.lv-c{background:#f7e2de;color:var(--warn)}
+.layer ul{background:#fff;border:1px solid var(--line-soft);border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);margin:0;padding:.7em .9em .7em 2.2em;font-size:.87rem;color:var(--ink-2)}
+
+/* 页尾 */
+.site-footer{background:var(--brand);color:#c9d9e2;margin-top:clamp(24px,4vw,48px);font-size:.86rem}
+.footer-in{max-width:var(--maxw);margin:0 auto;padding:clamp(24px,3.6vw,44px) clamp(12px,3vw,24px) 1.4em;display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:clamp(18px,2.6vw,34px)}
+.footer-brand{display:flex;align-items:center;gap:.6em;margin-bottom:.7em}
+.footer-brand svg{width:34px;height:34px;flex:none}
+.footer-brand span{font-family:"Noto Sans SC",system-ui,sans-serif;font-weight:800;color:#fff;font-size:1rem;letter-spacing:.02em}
+.footer-in p{color:#a9c0cd;font-size:.83rem;margin-bottom:.6em}
+.footer-in h4{font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.86rem;color:#fff;margin-bottom:.7em;letter-spacing:.06em;font-weight:700}
+.footer-in ul{list-style:none;padding:0;margin:0;font-family:"Noto Sans SC",system-ui,sans-serif}
+.footer-in li{margin-bottom:.42em}
+.footer-in a{color:#c9d9e2;font-size:.84rem}
+.footer-in a:hover{color:var(--accent)}
+.footer-note{
+  max-width:var(--maxw);margin:0 auto;padding:1em clamp(12px,3vw,24px) 1.6em;
+  border-top:1px solid rgba(255,255,255,.14);color:#93aab8;font-size:.78rem;
+  display:flex;justify-content:space-between;gap:1em;flex-wrap:wrap;font-family:"Noto Sans SC",system-ui,sans-serif;
+}
+.footer-note .updated{color:#b9cdd8}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:clamp(12px,2.4vw,28px);bottom:clamp(16px,3vw,30px);z-index:90;
+  width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);
+  background:var(--brand);color:#fff;display:none;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-hover);cursor:pointer;
+}
+.to-top.show{display:flex}
+.to-top svg{width:20px;height:20px}
+.to-top:hover{background:var(--brand-2)}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+hr.soft{border:none;border-top:1px solid var(--line-soft);margin:1.2em 0}
+
+figure.media{margin:0 0 1em}
+figure.media img{width:100%;height:auto;border-radius:var(--radius-sm);object-fit:cover;border:1px solid var(--line-soft)}
+figure.media figcaption{font-family:"Noto Sans SC",system-ui,sans-serif;font-size:.75rem;color:var(--ink-3);margin-top:.4em}
+
+/* ============ 响应式 ============ */
+@media (max-width:1000px){
+  .layout{grid-template-columns:1fr}
+  .side-col{order:2}
+  .main-col{order:1}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero{grid-template-columns:1fr;gap:18px}
+  .hero-visual{order:2;min-height:0}
+  .hero-visual svg{max-width:400px;margin:0 auto}
+  .footer-in{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .header-in{flex-wrap:wrap;row-gap:.5em}
+  .nav-toggle{display:inline-flex;align-items:center;gap:.35em}
+  .main-nav{display:none;flex-basis:100%;order:3;flex:auto}
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:0;border-top:1px solid var(--line-soft);padding-top:.4em}
+  .main-nav a{display:block;padding:.5em .2em;border-bottom:1px solid var(--line-soft)}
+  .header-tools{order:2;margin-left:auto}
+  .search-wrap input{width:min(52vw,210px)}
+  .grid-3,.grid-2{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .compare .cmp-head.alt{border-top:1px solid #fff}
+  .compare .cell:nth-child(4n+1){background:#fbfaf6}
+  .footer-in{grid-template-columns:1fr}
+  .list-tight li{grid-template-columns:1fr;gap:.1em}
+  .to-top{width:40px;height:40px;right:12px;bottom:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;scroll-behavior:auto !important}
+  .card:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="sticky-shell">
+  <div class="announce" role="region" aria-label="站点公告">
+    <div class="announce-in">
+      <span class="dot" aria-hidden="true"></span>
+      <b>研究所导航在线入口</b>
+      <span>11 月 6 日新增 23 条实验室站点：合肥同步辐射装置线站、深圳合成生物学大设施、上海张江光源二期</span>
+      <a href="/#updates">查看更新清单</a>
+      <span class="ann-right">索引校验 11 月 7 日</span>
+    </div>
+  </div>
+  <header class="site-header" id="top">
+    <div class="header-in">
+      <a class="brand" href="/#top" aria-label="研究所导航在线入口首页">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#0f3d5c"/>
+          <path d="M32 10 54 34H42v18H22V34H10z" fill="none" stroke="#f2c14e" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="32" cy="44" r="4" fill="#f2c14e"/>
+          <path d="M26 52h12" stroke="#f2c14e" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-txt">研究所导航在线入口<span class="brand-sub">RESEARCH · PORTAL</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" id="navToggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        菜单
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="主题导航">
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#featured">精选入口</a></li>
+          <li><a href="/#updates">今日更新</a></li>
+          <li><a href="/#channels">机构分类</a></li>
+          <li><a href="/#deep">入口辨析</a></li>
+          <li><a href="/#guide">访问指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <div class="search-wrap">
+          <svg class="s-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input type="search" id="siteSearch" placeholder="查机构、城市、平台…" aria-label="站内查找机构与平台" autocomplete="off">
+          <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="main">
+
+  <!-- ============ 首屏 ============ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">官方站点 · 权限与开放度标注</span>
+      <h1 id="hero-title">研究所导航在线入口</h1>
+      <p class="hero-lead">把中科院各研究所、社科院片区所、全国重点实验室与大科学装置的官网入口放到同一张索引里，按研究领域、所在城市、隶属关系和开放权限四类检索。<b>每条记录注明栏目完整度与最近一次抓取时间</b>，省去在搜索结果里翻十几页找人才招聘与仪器预约的位置。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#channels">按机构类型找入口</a>
+        <a class="btn btn-ghost" href="/#featured">看本周精选</a>
+      </div>
+      <div class="hero-stats">
+        <div><span class="num">1,286</span><span class="lbl">已校验站点</span></div>
+        <div><span class="num">43</span><span class="lbl">覆盖城市</span></div>
+        <div><span class="num">18</span><span class="lbl">学科门类</span></div>
+        <div><span class="num">7</span><span class="lbl">吸顶入口</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 420 380" role="img">
+        <defs>
+          <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#e8eff2"/><stop offset="1" stop-color="#f7f5f0"/>
+          </linearGradient>
+          <linearGradient id="gBuild" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#155e75"/><stop offset="1" stop-color="#0f3d5c"/>
+          </linearGradient>
+        </defs>
+        <rect x="10" y="20" width="400" height="340" rx="22" fill="url(#gSky)"/>
+        <circle cx="330" cy="86" r="34" fill="#f2c14e" opacity=".85"/>
+        <g stroke="#0f3d5c" stroke-width="2" fill="none" opacity=".55">
+          <path d="M40 300h340"/><path d="M60 300V190h70v110"/><path d="M170 300V150h60v150"/>
+          <path d="M270 300V210h70v90"/>
+        </g>
+        <g fill="url(#gBuild)">
+          <rect x="66" y="196" width="58" height="104" rx="3"/>
+          <rect x="176" y="156" width="48" height="144" rx="3"/>
+          <rect x="276" y="216" width="58" height="84" rx="3"/>
+        </g>
+        <g fill="#f2c14e">
+          <rect x="78" y="210" width="10" height="10" rx="1"/><rect x="98" y="210" width="10" height="10" rx="1"/>
+          <rect x="78" y="232" width="10" height="10" rx="1"/><rect x="98" y="232" width="10" height="10" rx="1"/>
+          <rect x="188" y="172" width="10" height="10" rx="1"/><rect x="204" y="172" width="10" height="10" rx="1"/>
+          <rect x="188" y="194" width="10" height="10" rx="1"/><rect x="204" y="194" width="10" height="10" rx="1"/>
+          <rect x="288" y="230" width="10" height="10" rx="1"/><rect x="306" y="230" width="10" height="10" rx="1"/>
+          <rect x="288" y="252" width="10" height="10" rx="1"/>
+        </g>
+        <g stroke="#0f3d5c" stroke-width="2" fill="#fff">
+          <circle cx="120" cy="132" r="15"/><path d="M120 117v-14"/><circle cx="120" cy="132" r="4" fill="#f2c14e" stroke="none"/>
+        </g>
+        <g stroke="#155e75" stroke-width="2" fill="none" opacity=".7">
+          <path d="M40 330h340" stroke-dasharray="6 7"/>
+          <path d="M60 344h300" stroke-dasharray="2 8"/>
+        </g>
+        <path d="M240 96l26 26-9 4 7 16-8 4-7-16-9 9z" fill="#f2c14e" opacity=".9"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ 领域概览 ============ -->
+  <section class="section" id="overview" aria-labelledby="h-overview">
+    <div class="section-head">
+      <span class="kicker">Domain Map</span>
+      <h2 id="h-overview">科研机构入口的四种组织方式</h2>
+      <p>同样是“研究所”，网站结构差异很大。先认清入口挂在哪个体系下，再决定查哪个栏目。</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card">
+        <h3>中科院直属研究所</h3>
+        <p>域名多为 <b>xxx.cas.cn</b> 子域，首页常设“机构概况—研究队伍—研究生教育—科学传播”四段。仪器预约集中在“所级中心”栏目，部分所把预约系统放在二级域名 <span class="tag tag-blue">yq.cas.cn</span>。</p>
+        <div class="meta"><span>代表：物理所、上海有机所、昆明植物所</span></div>
+      </article>
+      <article class="card">
+        <h3>全国重点实验室</h3>
+        <p>2022 年重组后多数实验室拥有独立站点，首页突出“开放课题—学术委员会—年度报告”。开放课题申请入口通常一年开放一次，集中在 3 月至 5 月。</p>
+        <div class="meta"><span>代表：分子生物学国家重点实验室、半导体超晶格实验室</span></div>
+      </article>
+      <article class="card">
+        <h3>大科学装置与观测台站</h3>
+        <p>装置站点以“用户服务—机时申请—数据产品”为主线，机时申请需通过单位科技处提交。观测台站另设数据下载页，多数要求注册后按数据集申请。</p>
+        <div class="meta"><span>代表：FAST、EAST、LAMOST</span></div>
+      </article>
+      <article class="card">
+        <h3>社科院片区所与地方院所</h3>
+        <p>社科院各研究所官网多挂在 <b>cass.cn</b> 下，栏目重心在学术期刊与成果发布；地方社科院独立域名较多，页面风格差异大，导航以“本院概况—研究人员—智库成果”为主。</p>
+        <div class="meta"><span>代表：世界经济与政治研究所、上海社科院</span></div>
+      </article>
+      <article class="card">
+        <h3>高校内设研究院</h3>
+        <p>交叉研究院、高等研究院通常作为高校二级单位，入口在高校官网“院系设置”内。独立域名的情况较少，招生与招聘信息分散在研究生院和人事处两个页面。</p>
+        <div class="meta"><span>代表：清华高等研究院、北大前沿交叉学科研究院</span></div>
+      </article>
+      <article class="card">
+        <h3>国际联合研究机构</h3>
+        <p>如中科院与境外机构共建的联合中心，站点常有中英双语切换，人员页面按 PI 字母排序。合作项目栏目的更新频率低于国内所，部分页面最后更新停在 2025 年。</p>
+        <div class="meta"><span>代表：中科院—马普学会伙伴小组</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 精选内容推荐 ============ -->
+  <section class="section" id="featured" aria-labelledby="h-featured">
+    <div class="section-head">
+      <span class="kicker">Editor's Picks</span>
+      <h2 id="h-featured">本周精选的六个必查入口</h2>
+      <p>按“栏目完整、更新活跃、有清晰权限说明”三条标准筛出，附上检索时真正会用的栏目位置。</p>
+    </div>
+    <div class="layout">
+      <div class="main-col">
+        <div class="grid grid-2">
+          <article class="card">
+            <figure class="media">
+              <img src="https://picsum.photos/seed/lab-facility-42/640/300" width="640" height="300" loading="lazy" alt="实验室走廊内景，白色墙面与设备机柜排列" style="object-fit:cover">
+            </figure>
+            <h3><a href="/#channels">中科院物理研究所入口：所级公共技术中心</a></h3>
+            <p>“所级中心”栏目内列出 12 台大型设备的开放状态与联系方式，比在“仪器共享”总平台按所名搜索更快。2026 年 10 月新增了低温强磁场测量系统的预约说明。</p>
+            <div class="meta"><span class="tag tag-green">开放预约</span><span>11 月 5 日校验</span></div>
+          </article>
+          <article class="card">
+            <figure class="media">
+              <img src="https://picsum.photos/seed/synchrotron-beam/640/300" width="640" height="300" loading="lazy" alt="同步辐射光源线站外观，环形建筑与管线结构" style="object-fit:cover">
+            </figure>
+            <h3><a href="/#channels">合肥光源线站申请入口：用户服务栏</a></h3>
+            <p>线站申请走“用户服务—课题申请—在线填报”，需先注册用户账号。2026 年第二轮机时申请截止到 11 月 20 日，评审结果在 12 月中旬公布。</p>
+            <div class="meta"><span class="tag tag-warn">限时申请</span><span>11 月 6 日校验</span></div>
+          </article>
+          <article class="card">
+            <figure class="media">
+              <img src="https://picsum.photos/seed/botanical-herbarium/640/300" width="640" height="300" loading="lazy" alt="植物标本馆内标本柜排列与桌面标本夹" style="object-fit:cover">
+            </figure>
+            <h3><a href="/#updates">昆明植物研究所标本馆数据检索</a></h3>
+            <p>标本馆主页提供 200 万份腊叶标本的在线检索，字段包含采集地、海拔和鉴定人。批量下载需填写用途说明，单次上限 5,000 条记录。</p>
+            <div class="meta"><span class="tag tag-blue">数据开放</span><span>11 月 4 日校验</span></div>
+          </article>
+          <article class="card">
+            <figure class="media">
+              <img src="https://picsum.photos/seed/social-science-shelf/640/300" width="640" height="300" loading="lazy" alt="社会科学研究机构阅览室内书架与期刊" style="object-fit:cover">
+            </figure>
+            <h3><a href="/#channels">社科院世界经济与政治研究所期刊入口</a></h3>
+            <p>《世界经济与政治》投稿系统挂在研究所官网“学术期刊”栏目下，审稿周期页面写明为 90 天内反馈。往年目录可按年份浏览，不需登录。</p>
+            <div class="meta"><span class="tag">投稿入口</span><span>11 月 3 日校验</span></div>
+          </article>
+          <article class="card">
+            <h3><a href="/#faq">FAST 脉冲星数据下载须知</a></h3>
+            <p>观测数据分“开放数据”和“申请数据”两级，开放数据在观测结束 18 个月后释放，下载入口需要项目编号。2026 年 10 月的 47 颗新脉冲星发现数据已在开放库更新。</p>
+            <div class="meta"><span class="tag tag-green">数据开放</span><span>11 月 2 日校验</span></div>
+          </article>
+          <article class="card">
+            <h3><a href="/#guide">深圳合成生物学大设施平台预约流程</a></h3>
+            <p>先在大设施官网注册，再选择“平台服务—设备列表”，可预约的包括高通量筛选与自动化克隆平台。外部单位需附合作协议扫描件，审核周期 5 个工作日。</p>
+            <div class="meta"><span class="tag tag-warn">外部需审核</span><span>11 月 6 日校验</span></div>
+          </article>
+        </div>
+      </div>
+      <aside class="side-col" aria-label="精选板块侧栏">
+        <div class="side-card">
+          <h3>本周检索热度</h3>
+          <ul class="rank">
+            <li><span class="r-no top">1</span><span class="r-name"><b>中科院自动化所</b><span>模式识别实验室</span></span><span class="r-val">+38%</span></li>
+            <li><span class="r-no top">2</span><span class="r-name"><b>上海药物研究所</b><span>新药筛选平台</span></span><span class="r-val">+31%</span></li>
+            <li><span class="r-no">3</span><span class="r-name"><b>国家天文台</b><span>FAST 观测申请</span></span><span class="r-val">+24%</span></li>
+            <li><span class="r-no">4</span><span class="r-name"><b>生态环境研究中心</b><span>环境水质数据库</span></span><span class="r-val">+19%</span></li>
+            <li><span class="r-no">5</span><span class="r-name"><b>计算技术研究所</b><span>开放课题申报</span></span><span class="r-val">+16%</span></li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>按城市定位入口</h3>
+          <div class="tag-index">
+            <a href="/#channels">北京<span class="cnt">412</span></a>
+            <a href="/#channels">上海<span class="cnt">208</span></a>
+            <a href="/#channels">合肥<span class="cnt">96</span></a>
+            <a href="/#channels">西安<span class="cnt">88</span></a>
+            <a href="/#channels">武汉<span class="cnt">74</span></a>
+            <a href="/#channels">广州<span class="cnt">67</span></a>
+            <a href="/#channels">成都<span class="cnt">61</span></a>
+            <a href="/#channels">昆明<span class="cnt">45</span></a>
+            <a href="/#channels">兰州<span class="cnt">39</span></a>
+            <a href="/#channels">大连<span class="cnt">36</span></a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ 最新更新 ============ -->
+  <section class="section" id="updates" aria-labelledby="h-updates">
+    <div class="section-head">
+      <span class="kicker">Fresh Records</span>
+      <h2 id="h-updates">今天与昨天新核对的入口</h2>
+      <p>站点地址、栏目位置、申请截止日期三项只要有一项变动就重新登记。</p>
+    </div>
+    <div class="grid grid-2">
+      <div>
+        <ul class="list-tight">
+          <li><time datetime="2026-11-08">今天 09:20</time><span><span class="li-title"><a href="/#channels">合肥同步辐射装置线站列表</a></span><span class="li-sum">新增 7 条线站页面，其中 3 条标注“2026 年第二轮机时申请中”。</span></span></li>
+          <li><time datetime="2026-11-08">今天 08:45</time><span><span class="li-title"><a href="/#channels">深圳合成生物学大设施</a></span><span class="li-sum">设备预约页改版，原先的“平台服务”栏目更名为“设施服务”，旧链接跳转到首页。</span></span></li>
+          <li><time datetime="2026-11-08">今天 08:10</time><span><span class="li-title"><a href="/#faq">FAST 观测申请数据政策</a></span><span class="li-sum">开放数据释放期由原来的 24 个月调整为 18 个月，公告原文见首页“通知公告”第 3 条。</span></span></li>
+          <li><time datetime="2026-11-07">昨天 17:30</time><span><span class="li-title"><a href="/#channels">中科院上海药物研究所</a></span><span class="li-sum">新药筛选平台入口移到“技术平台—筛选中心”，新增在线预约表单。</span></span></li>
+          <li><time datetime="2026-11-07">昨天 15:02</time><span><span class="li-title"><a href="/#channels">生态环境研究中心水质数据库</a></span><span class="li-sum">2025 年度太湖流域监测数据已上线，字段说明文档更新至 v3.1。</span></span></li>
+          <li><time datetime="2026-11-07">昨天 11:15</time><span><span class="li-title"><a href="/#channels">社科院世界经济与政治研究所</a></span><span class="li-sum">《世界经济与政治》2026 年第 10 期目录页可访问，摘要页仍在维护。</span></span></li>
+          <li><time datetime="2026-11-06">11 月 6 日</time><span><span class="li-title"><a href="/#channels">国家天文台兴隆观测基地</a></span><span class="li-sum">2.16 米望远镜观测申请表单更换为新的在线系统，旧 PDF 表单停止受理。</span></span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="quote-card">
+          <p>“11 月 8 日凌晨的核对里，变化集中在两类：一是大设施预约系统改版，二是数据开放政策收紧。前者只需换入口，后者会直接影响论文数据可用性，别等到投稿前才发现引用条款变了。”</p>
+          <p class="who">—— 站点校验记录，2026-11-08</p>
+        </div>
+        <hr class="soft">
+        <div class="side-card" style="box-shadow:none">
+          <h3>更新密度（近 7 天）</h3>
+          <ul class="list-tight" style="font-size:.86rem">
+            <li><time>11 月 8 日</time><span>3 条</span></li>
+            <li><time>11 月 7 日</time><span>3 条</span></li>
+            <li><time>11 月 6 日</time><span>4 条</span></li>
+            <li><time>11 月 5 日</time><span>2 条</span></li>
+            <li><time>11 月 4 日</time><span>5 条</span></li>
+            <li><time>11 月 3 日</time><span>1 条</span></li>
+            <li><time>11 月 2 日</time><span>2 条</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 分类入口 ============ -->
+  <section class="section" id="channels" aria-labelledby="h-channels">
+    <div class="section-head">
+      <span class="kicker">Channels</span>
+      <h2 id="h-channels">按学科与平台类型进入</h2>
+      <p>十个频道，覆盖从物理装置到社会科学期刊的高频检索路径。</p>
+    </div>
+    <div class="tag-index" style="margin-bottom:1.4em">
+      <a href="/#channels">凝聚态物理与材料<span class="cnt">126</span></a>
+      <a href="/#channels">化学与药物筛选平台<span class="cnt">118</span></a>
+      <a href="/#channels">天文观测与空间科学<span class="cnt">74</span></a>
+      <a href="/#channels">生态环境与地学观测<span class="cnt">96</span></a>
+      <a href="/#channels">生命科学与生物安全<span class="cnt">142</span></a>
+      <a href="/#channels">信息技术与人工智能<span class="cnt">88</span></a>
+      <a href="/#channels">能源与核科学研究<span class="cnt">63</span></a>
+      <a href="/#channels">社会科学与智库<span class="cnt">105</span></a>
+      <a href="/#channels">国家野外科学观测站<span class="cnt">81</span></a>
+      <a href="/#channels">大科学装置用户服务<span class="cnt">57</span></a>
+    </div>
+    <div class="grid grid-3">
+      <article class="card">
+        <h3>凝聚态物理与材料</h3>
+        <p>物理所、金属所、宁波材料所为主干。检索“材料计算”时容易混入高校课题组站点，认准所徽和英文全称可排除。</p>
+        <div class="meta"><span class="tag tag-blue">126 条</span><span>含 8 条极低温设备</span></div>
+      </article>
+      <article class="card">
+        <h3>化学与药物筛选平台</h3>
+        <p>上海有机所、上海药物所、化学所三家站点结构相近，均有“公共技术平台”下设的分析测试中心。</p>
+        <div class="meta"><span class="tag tag-blue">118 条</span><span>含 24 条筛选服务</span></div>
+      </article>
+      <article class="card">
+        <h3>天文观测与空间科学</h3>
+        <p>国家天文台、紫金山天文台、上海天文台。观测申请页面差异较大，兴隆基地与丽江观测站分别维护。</p>
+        <div class="meta"><span class="tag tag-blue">74 条</span><span>含 11 条望远镜申请</span></div>
+      </article>
+      <article class="card">
+        <h3>生态环境与地学观测</h3>
+        <p>生态环境研究中心、地理所、南京土壤所。数据库多挂“科研产出—数据产品”栏目，部分页面需要 CSTR 标识检索。</p>
+        <div class="meta"><span class="tag tag-green">96 条</span><span>含 33 条数据下载</span></div>
+      </article>
+      <article class="card">
+        <h3>生命科学与生物安全</h3>
+        <p>上海生命科学研究院所属各所、微生物所、武汉病毒所。生物安全等级较高的实验室页面只开放机构概况。</p>
+        <div class="meta"><span class="tag tag-blue">142 条</span><span>含 17 条菌种保藏</span></div>
+      </article>
+      <article class="card">
+        <h3>信息技术与人工智能</h3>
+        <p>计算所、自动化所、软件所。开放课题申报集中在年初，年底多为结题公示，检索时注意年份。</p>
+        <div class="meta"><span class="tag tag-blue">88 条</span><span>含 9 条开放课题</span></div>
+      </article>
+      <article class="card">
+        <h3>能源与核科学研究</h3>
+        <p>工程热物理所、近代物理所、等离子体所。装置类页面普遍设置“用户服务”独立导航，机时申请需注册。</p>
+        <div class="meta"><span class="tag tag-blue">63 条</span><span>含 12 条装置用户入口</span></div>
+      </article>
+      <article class="card">
+        <h3>社会科学与智库</h3>
+        <p>社科院片区所与地方社科院。成果发布栏目更新较快，投稿系统入口多集中在“学术期刊”二级页。</p>
+        <div class="meta"><span class="tag tag-blue">105 条</span><span>含 31 条期刊入口</span></div>
+      </article>
+      <article class="card">
+        <h3>国家野外科学观测站</h3>
+        <p>按生态系统类型分为森林、草原、农田、湿地等，站点页面普遍简洁，数据申请通过所属研究所统一受理。</p>
+        <div class="meta"><span class="tag tag-green">81 条</span><span>含 40 条长期观测</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 深度解析 ============ -->
+  <section class="section" id="deep" aria-labelledby="h-deep">
+    <div class="deep">
+      <span class="kicker" style="font-family:'Noto Sans SC',system-ui,sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.16em;color:var(--accent);display:block;margin-bottom:.3em">Analysis</span>
+      <h2 id="h-deep">入口好用不好用，差在这三处结构</h2>
+      <p>把 1,286 条站点记录按“栏目深度、更新频率、权限说明”拆开看，会发现研究所网站的问题不在美观，而在几个固定位置的信息缺口。</p>
+
+      <h3>一、首页导航的栏目数量与可检索性并不成正比</h3>
+      <p>抽取 60 个中科院直属研究所站点统计：首页一级导航数量在 6 到 11 个之间，均值 8.4 个。导航 9 个以上的站点共有 21 个，其中只有 6 个把“仪器预约”放进一级导航，其余放在“科研支撑”或“公共服务”二级页里。导航项少的站点反而更容易把关键入口前置——导航 7 项的 14 个站点中有 10 个在首屏提供了“研究生招生”和“人才招聘”的直接链接。</p>
+      <table class="data">
+        <caption>60 个中科院直属所首页导航结构抽样（2026 年 10 月抓取）</caption>
+        <thead><tr><th>一级导航数量</th><th>站点数</th><th>仪器预约在一级导航</th><th>招聘信息在首屏</th></tr></thead>
+        <tbody>
+          <tr><td>6—7 项</td><td>19</td><td>11 个</td><td>13 个</td></tr>
+          <tr><td>8—9 项</td><td>27</td><td>9 个</td><td>10 个</td></tr>
+          <tr><td>10—11 项</td><td>14</td><td>4 个</td><td>5 个</td></tr>
+        </tbody>
+      </table>
+      <div class="claim"><strong>可引用的判断：</strong>一级导航越精简的研究所站点，关键入口越容易被找到。导航项超过 9 个后，仪器预约与招聘信息的首屏可见率分别下降到 29% 和 36%。</div>
+      <p>这个判断可以被反驳：导航项多可能包含“科学传播”“党建”等非科研栏目，单纯比数量并不公平。更细的办法是只看科研相关导航数量，但抓取时栏目命名不统一，自动化分类误差大，目前只能以总数做粗略比较。</p>
+
+      <h3>二、数据开放政策在 18 个月与 24 个月之间反复</h3>
+      <p>2026 年 8 月至 11 月，至少 4 个大科学装置调整了观测数据释放期限。FAST 在 10 月 30 日的通知公告里写明开放数据释放期从 24 个月缩短为 18 个月；LAMOST 仍维持 24 个月；EAST 相关诊断数据按实验轮次释放，未设固定月数；合肥光源的线站数据以课题为单位，由课题负责人决定是否公开。</p>
+      <ul>
+        <li><b>FAST：</b>18 个月，2026 年 10 月 30 日公告，适用于此后的新观测项目。</li>
+        <li><b>LAMOST：</b>24 个月，2026 年 9 月版本的数据政策页未变。</li>
+        <li><b>合肥光源：</b>无统一期限，课题负责人授权后公开。</li>
+      </ul>
+      <p>政策调整直接影响论文的补充材料安排。一个 2025 年 3 月观测的 FAST 项目，按旧规则要等到 2027 年 3 月才能开放引用原始数据，按新规则则可提前到 2026 年 9 月。是否追溯适用，公告只写“新项目”，已立项项目需发邮件询问。</p>
+
+      <h3>三、外部单位预约仪器的真实门槛在证明文件而非账号</h3>
+      <p>账号注册通常 1 个工作日内完成，卡住流程的是单位介绍信、合作协议或课题说明。2026 年 9 月至 11 月，收录的 17 家研究所平台里有 11 家要求外部单位提供加盖公章的单位介绍信，5 家要求已有合作课题编号，仅 1 家接受个人名义申请。</p>
+      <div class="compare">
+        <div class="cmp-head">材料齐备的情况</div>
+        <div class="cmp-head alt">材料缺失的常见结果</div>
+        <div class="cell"><strong>审核周期</strong>3—7 个工作日，遇设备排期紧张延长至 15 天</div>
+        <div class="cell"><strong>审核周期</strong>退回补件，重新排队，平均多耗 8 个工作日</div>
+        <div class="cell"><strong>可预约范围</strong>按公示的收费标准执行，部分平台提供首小时免费测试</div>
+        <div class="cell"><strong>可预约范围</strong>仅能查看设备状态，无法提交预约单</div>
+        <div class="cell"><strong>数据归属</strong>测试数据归委托方，原始谱图按协议共享</div>
+        <div class="cell"><strong>数据归属</strong>无协议时以平台默认条款为准，通常保留使用权</div>
+      </div>
+      <p>把判断拆成可核对项，可以这样查：先看平台“服务指南”是否写明外部单位材料清单，再看预约系统的必填字段是否含单位编号，最后看收费标准页是否公示。三项都齐的平台，外部预约成功率明显更高。仅凭首页“开放共享”四个字判断，容易在填表阶段返工。</p>
+
+      <h3>四、地方社科院与中科院站点的信息层差异</h3>
+      <p>社会科学类机构的入口重心不在设备，而在期刊、皮书与智库报告。社科院世界经济与政治研究所官网把“学术期刊”放在一级导航第 4 位，投稿系统、过刊目录、编委会名单在同一页面；中科院系统研究所则把“学术期刊”多数放在“科学传播”之下。按 2026 年 10 月的页面结构，前者从首页到投稿表单的点击次数为 2 次，后者中位数为 3 次。</p>
+      <p>这个差异没有优劣，但影响检索路径。要投中文核心期刊，先在社科院片区所站点找“学术期刊”比在综合数据库里搜刊名更快确认主办单位与投稿要求。</p>
+    </div>
+  </section>
+
+  <!-- ============ 体验指南 ============ -->
+  <section class="section" id="guide" aria-labelledby="h-guide">
+    <div class="section-head">
+      <span class="kicker">Walkthrough</span>
+      <h2 id="h-guide">第一次用这些入口，按五步走</h2>
+      <p>从确认机构到提交预约，每一步都有容易忽略的页面位置。</p>
+    </div>
+    <div class="layout">
+      <div class="main-col">
+        <ol class="steps">
+          <li><b>先确认隶属关系。</b>在机构名称后加“研究所”搜索，容易搜到高校同名机构。中科院直属所域名以 cas.cn 结尾，社科院片区所以 cass.cn 结尾，地方院所多为独立域名并在页脚标注省份备案号。</li>
+          <li><b>找“研究队伍”而不是“师资队伍”。</b>研究所站点普遍用“研究队伍”命名，按课题组列出 PI 姓名、办公室电话、研究方向。高校交叉研究院才用“师资队伍”。</li>
+          <li><b>在“科研支撑”里找设备。</b>仪器预约入口多藏在这一栏目下，名称可能是“公共技术中心”“所级中心”“分析测试中心”。页面内通常有设备清单表格与联系人邮箱。</li>
+          <li><b>核对开放课题的起止日期。</b>全国重点实验室的开放课题一年一开，公告多在 3 月至 5 月发布，11 月看到的公告大概率是来年预告或结题通知。提交前看清“申请截止”和“执行期”两列。</li>
+          <li><b>数据下载先读许可。</b>开放数据页底部一般有“数据使用说明”链接，写明引用格式和商用限制。没写许可的数据集，引用前发邮件确认，避免投稿时被要求补充授权。</li>
+        </ol>
+        <div class="quote-card" style="margin-top:1.2em">
+          <p>“外部单位想用某所的冷冻电镜，材料准备了两周，实际卡在合作协议盖章上。后来发现平台服务指南里写明了模板，直接下载所里的协议版本，三天就过了。”</p>
+          <p class="who">—— 某高校结构生物学课题组实验员，2026 年 10 月 27 日</p>
+        </div>
+      </div>
+      <aside class="side-col" aria-label="指南侧栏">
+        <div class="side-card">
+          <h3>常用栏目定位</h3>
+          <ul class="list-tight" style="font-size:.86rem">
+            <li><time>仪器</time><span>科研支撑 → 公共技术中心</span></li>
+            <li><time>招聘</time><span>人才招聘 → 岗位公告</span></li>
+            <li><time>招生</time><span>研究生教育 → 招生信息</span></li>
+            <li><time>数据</time><span>科研产出 → 数据产品</span></li>
+            <li><time>投稿</time><span>学术期刊 → 投稿系统</span></li>
+            <li><time>开放课题</time><span>科学研究 → 开放课题</span></li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>易踩的三个坑</h3>
+          <ul style="font-size:.86rem;padding-left:1.2em;color:var(--ink-2)">
+            <li>旧版预约系统未关闭，提交后无人审核。</li>
+            <li>设备清单里的“联系人”已调岗，邮件退回。</li>
+            <li>开放数据页的版本号与下载包不一致。</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ 相关资讯 ============ -->
+  <section class="section" id="news" aria-labelledby="h-news">
+    <div class="section-head">
+      <span class="kicker">Updates &amp; Policy</span>
+      <h2 id="h-news">影响入口使用的四条动态</h2>
+      <p>规则与平台层面的变化，比单个站点改版更值得留意。</p>
+    </div>
+    <div class="grid grid-2">
+      <article class="card">
+        <h3>中科院仪器共享平台 2026 年 11 月版本更新</h3>
+        <p>新版把“设备检索”与“预约记录”拆成两个独立页面，旧版收藏链接需重新生成。公告日期 11 月 5 日，迁移截止 12 月 31 日。部分所级平台尚未同步，登录后可能跳回旧界面。</p>
+        <div class="meta"><span class="tag tag-blue">平台改版</span><span>11 月 5 日</span></div>
+      </article>
+      <article class="card">
+        <h3>全国重点实验室 2027 年度开放课题指南陆续发布</h3>
+        <p>截至 11 月 7 日，已发布指南的实验室中，6 家将申请截止定在 12 月 15 日，3 家推迟到 2027 年 1 月。半导体超晶格实验室今年新增“青年课题”类别，资助额度 10 万元。</p>
+        <div class="meta"><span class="tag tag-warn">申报窗口</span><span>11 月 7 日</span></div>
+      </article>
+      <article class="card">
+        <h3>国家野外科学观测站数据年报开放下载</h3>
+        <p>2025 年度年报覆盖 168 个野外站，按生态系统类型分册。下载入口统一在“国家野外科学观测研究站数据中心”，需注册后按站名申请，单站年报约 40—120 页。</p>
+        <div class="meta"><span class="tag tag-green">数据开放</span><span>11 月 3 日</span></div>
+      </article>
+      <article class="card">
+        <h3>社科类期刊投稿系统向统一平台迁移</h3>
+        <p>社科院部分片区所的期刊投稿系统迁移到统一采编平台，作者账号需重新激活。迁移期间旧系统只读，已投稿件状态可通过邮件查询。涉及《世界经济与政治》《美国研究》等刊物。</p>
+        <div class="meta"><span class="tag">投稿变化</span><span>11 月 2 日</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq" aria-labelledby="h-faq">
+    <div class="section-head">
+      <span class="kicker">FAQ</span>
+      <h2 id="h-faq">访问入口时最常问的六个问题</h2>
+      <p>答案围绕机构站点本身的结构与规则。</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>中科院各研究所官网入口怎么区分官方与镜像站？</summary>
+        <div class="faq-body">
+          <p>域名是最直接的依据：直属研究所多以 cas.cn 或其子域结尾，部分所使用独立域名，但页脚会标注机构全称与京ICP备案号。镜像站通常只保留论文库和人员名单，不提供人才招聘与仪器预约栏目。页面顶部是否出现中科院院徽与研究所英文全称，也能快速判断。</p>
+        </div>
+      </details>
+      <details>
+        <summary>国家实验室与全国重点实验室的在线入口有什么区别？</summary>
+        <div class="faq-body">
+          <p>国家实验室入口一般挂靠在牵头单位官网下设栏目，页面以总体研究方向和联合攻关课题为主；全国重点实验室多数有独立站点，提供年度开放课题申请、学术委员会名单和仪器共享预约。两者在课题申报入口和开放时间上不同，前者的信息更多由牵头单位统一发布。</p>
+        </div>
+      </details>
+      <details>
+        <summary>研究所大型仪器共享平台预约需要什么账号？</summary>
+        <div class="faq-body">
+          <p>多数研究所使用中科院仪器共享管理平台或本所自建系统。所内人员用工号或一卡通号登录；外部单位需先提交加盖公章的单位介绍信和课题说明，审核通过后获得临时账号。单次预约周期通常为 7 到 15 个工作日，设备排期紧张时更长。</p>
+        </div>
+      </details>
+      <details>
+        <summary>研究所开放数据下载入口的数据能直接用于论文吗？</summary>
+        <div class="faq-body">
+          <p>数据页面通常附带使用许可说明，常见为 CC BY 4.0 或仅限非商业研究用途。引用时按页面给出的推荐格式著录数据集名称、版本号和获取日期。涉及个人健康、精确地理坐标的数据需要另行申请脱敏版本，直接使用原始包可能违反协议。</p>
+        </div>
+      </details>
+      <details>
+        <summary>访问境外研究所网站加载缓慢怎么处理？</summary>
+        <div class="faq-body">
+          <p>境外研究机构站点在国内访问受线路影响，可优先使用其机构知识库或镜像数据库，论文全文通过 DOI 跳转出版社页面。会议注册与人员页面一般能正常打开，视频讲座加载失败不影响信息查询。需要批量下载数据集时，可在页面说明里找 FTP 或 API 入口。</p>
+        </div>
+      </details>
+      <details>
+        <summary>博士生如何通过研究所入口联系意向导师？</summary>
+        <div class="faq-body">
+          <p>研究所官网“研究队伍”栏目按课题组列出研究员姓名、办公室电话和邮箱，部分页面附招生方向与在读学生名单。邮件联系时附上成绩单与研究兴趣说明，回复周期一般一到两周。招生季前三个月联系，获得明确答复的概率更高。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ 用户评论 ============ -->
+  <section class="section" id="comments" aria-labelledby="h-comments">
+    <div class="section-head">
+      <span class="kicker">Voices</span>
+      <h2 id="h-comments">来自使用者的六条反馈</h2>
+      <p>有正面，也有具体的吐槽。涉及站点与栏目名称的，都指向具体条目。</p>
+    </div>
+    <div class="comments">
+      <div class="comment">
+        <div class="comment-top"><span class="avatar">林</span><span class="c-name">林工</span><span class="c-meta">材料方向 · 11 月 7 日</span></div>
+        <p>上海有机所的<span class="hl">分析测试中心页面</span>做得实在，设备清单直接标了收费标准和联系人分机号，不像有的所只放一张模糊表格。上周预约核磁，按页面说明准备材料，两天就批了。</p>
+      </div>
+      <div class="comment">
+        <div class="comment-top"><span class="avatar a2">周</span><span class="c-name">周同学</span><span class="c-meta">在读博士 · 11 月 6 日</span></div>
+        <p>吐槽一下某所的<span class="hl">旧版仪器预约入口</span>，表单提交后页面没有任何反馈，等了一周发邮件问才知道系统早停用了，新入口在另一个二级域名。这种旧链接能不能在首页挂个跳转提示。</p>
+      </div>
+      <div class="comment">
+        <div class="comment-top"><span class="avatar a3">陈</span><span class="c-name">陈老师</span><span class="c-meta">高校教师 · 11 月 6 日</span></div>
+        <p>全国重点实验室的开放课题信息分散，有的实验室放“通知公告”，有的放“科学研究”。按年份整理的页面很少。11 月 7 日查半导体超晶格实验室的指南，是从新闻列表里翻出来的。</p>
+      </div>
+      <div class="comment">
+        <div class="comment-top"><span class="avatar a4">吴</span><span class="c-name">吴研究员</span><span class="c-meta">生态学 · 11 月 5 日</span></div>
+        <p><span class="hl">生态环境研究中心的水质数据库</span>字段说明写得很细，版本号也标了，v3.1 的变更记录里写清楚新增了太湖流域 2025 年度数据。引用格式页给的是 BibTeX 和纯文本两种，省事。</p>
+      </div>
+      <div class="comment">
+        <div class="comment-top"><span class="avatar a5">赵</span><span class="c-name">赵编辑</span><span class="c-meta">期刊编辑 · 11 月 4 日</span></div>
+        <p>《世界经济与政治》投稿系统迁移期间旧系统只读，作者状态查询还是靠邮件。迁移公告写得不太显眼，放在首页第三屏，很多作者没注意到。这类影响投稿的信息应该放在更靠前的位置。</p>
+      </div>
+      <div class="comment">
+        <div class="comment-top"><span class="avatar">何</span><span class="c-name">何工</span><span class="c-meta">装置用户 · 11 月 3 日</span></div>
+        <p>合肥光源线站申请页面要求先注册再用课题编号填报，流程本身清楚。11 月 6 日看到新增的 7 条线站里有 3 条标了本轮申请，但其中一条的截止日期和总公告不一致，建议核对后再提交。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 补充板块：可信度分层 ============ -->
+  <section class="section" id="layers" aria-labelledby="h-layers">
+    <div class="section-head">
+      <span class="kicker">Source Layers</span>
+      <h2 id="h-layers">入口信息的可信度分三层</h2>
+      <p>同一个入口地址在不同来源出现时，按下面三层判断以哪条为准。</p>
+    </div>
+    <div class="layers">
+      <details class="layer" open>
+        <summary><span class="lv-badge lv-a">A 层</span>机构官网自身页面</summary>
+        <ul>
+          <li>研究所首页、栏目页、通知公告原文，页面底部有机构全称与备案号。</li>
+          <li>以页面上的“发布日期”和“来源”署名判断，转载需回溯原始页面。</li>
+          <li>示例：中科院物理所“所级中心”设备清单，页面最后更新 2026 年 10 月 28 日。</li>
+        </ul>
+      </details>
+      <details class="layer">
+        <summary><span class="lv-badge lv-b">B 层</span>上级平台与统一系统</summary>
+        <ul>
+          <li>中科院仪器共享管理平台、国家野外站数据中心等汇总页面。</li>
+          <li>信息可能滞后于机构自建系统，预约前以机构页面为准。</li>
+          <li>示例：11 月 5 日平台改版后，部分所级链接仍指向旧地址。</li>
+        </ul>
+      </details>
+      <details class="layer">
+        <summary><span class="lv-badge lv-c">C 层</span>第三方整理与转载</summary>
+        <ul>
+          <li>公众号推文、论坛帖子、非官方导航页。</li>
+          <li>可用作线索，地址、截止日期、联系人三项须逐一回官网核对。</li>
+          <li>示例：某公众号整理的“全国实验室开放课题汇总表”，更新日期停在 2026 年 6 月。</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ 相关推荐 ============ -->
+  <section class="section" id="related" aria-labelledby="h-related">
+    <div class="section-head">
+      <span class="kicker">Also Useful</span>
+      <h2 id="h-related">可能还会用到的入口与专题</h2>
+      <p>按检索动作归类，不是泛泛的“猜你喜欢”。</p>
+    </div>
+    <div class="tag-index">
+      <a href="/#channels">中科院仪器共享平台账号注册</a>
+      <a href="/#channels">全国重点实验室开放课题汇总</a>
+      <a href="/#updates">大科学装置机时申请截止日历</a>
+      <a href="/#channels">国家野外站数据申请流程</a>
+      <a href="/#faq">FAST 观测数据使用许可</a>
+      <a href="/#channels">社科院期刊投稿系统入口</a>
+      <a href="/#guide">外部单位仪器预约材料清单</a>
+      <a href="/#channels">研究所研究生招生信息页</a>
+      <a href="/#channels">生物安全实验室访问规定</a>
+      <a href="/#layers">入口信息核实步骤</a>
+      <a href="/#channels">地方社科院智库成果发布</a>
+      <a href="/#faq">境外研究所镜像库使用</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="footer">
+  <div class="footer-in">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#155e75"/>
+          <path d="M32 10 54 34H42v18H22V34H10z" fill="none" stroke="#f2c14e" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="32" cy="44" r="4" fill="#f2c14e"/>
+        </svg>
+        <span>研究所导航在线入口</span>
+      </div>
+      <p>把分散的研究机构首页、仪器平台与数据页面编成一张可核对的索引，注明抓取时间与栏目位置。</p>
+    </div>
+    <div>
+      <h4>频道入口</h4>
+      <ul>
+        <li><a href="/#channels">凝聚态物理与材料</a></li>
+        <li><a href="/#channels">化学与药物筛选</a></li>
+        <li><a href="/#channels">天文观测与空间科学</a></li>
+        <li><a href="/#channels">生态环境与地学</a></li>
+        <li><a href="/#channels">大科学装置用户服务</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>专题与指南</h4>
+      <ul>
+        <li><a href="/#updates">今日更新清单</a></li>
+        <li><a href="/#deep">入口结构辨析</a></li>
+        <li><a href="/#guide">五步访问指南</a></li>
+        <li><a href="/#layers">可信度分层</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>说明</h4>
+      <p style="font-size:.8rem">站内条目为示例数据，机构名称、栏目位置与截止日期用于演示索引结构，实际以各机构官网公布内容为准。不提供账号与预约操作。</p>
+      <p style="font-size:.8rem">数据抓取时间：2026 年 11 月 8 日 09:20。</p>
+    </div>
+  </div>
+  <div class="footer-note">
+    <span>© 2026 研究所导航在线入口 · 内容整理与结构设计</span>
+    <span class="updated">页面更新：11 月 8 日，对应上方“最新更新”中三条核对记录。</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到页面顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('main-nav');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.matchMedia('(max-width:720px)').matches){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 站内查找 */
+  var input = document.getElementById('siteSearch');
+  var fb = document.getElementById('searchFeedback');
+  var index = [
+    {t:'中科院物理研究所 所级公共技术中心', u:'/#channels'},
+    {t:'合肥光源线站申请 用户服务', u:'/#channels'},
+    {t:'昆明植物研究所 标本馆数据检索', u:'/#updates'},
+    {t:'社科院世界经济与政治研究所 期刊投稿', u:'/#channels'},
+    {t:'FAST 脉冲星数据下载与许可', u:'/#faq'},
+    {t:'深圳合成生物学大设施 设备预约', u:'/#guide'},
+    {t:'上海药物研究所 新药筛选平台', u:'/#channels'},
+    {t:'生态环境研究中心 水质数据库', u:'/#updates'},
+    {t:'国家天文台 兴隆观测基地 望远镜申请', u:'/#channels'},
+    {t:'全国重点实验室 开放课题指南', u:'/#news'},
+    {t:'中科院仪器共享平台 2026 年 11 月改版', u:'/#news'},
+    {t:'国家野外科学观测站 数据年报', u:'/#news'},
+    {t:'外部单位仪器预约 材料清单', u:'/#guide'},
+    {t:'入口信息可信度分层', u:'/#layers'}
+  ];
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function runSearch(){
+    if(!fb || !input) return;
+    var q = input.value.trim();
+    if(!q){ fb.classList.remove('show'); fb.innerHTML=''; return; }
+    var hits = index.filter(function(item){ return item.t.indexOf(q) !== -1; }).slice(0,6);
+    if(hits.length){
+      var html = '<div>找到 ' + hits.length + ' 条相关入口：</div><ul>';
+      hits.forEach(function(h){ html += '<li><a href="' + h.u + '">' + esc(h.t) + '</a></li>'; });
+      html += '</ul>';
+      fb.innerHTML = html;
+    } else {
+      fb.innerHTML = '<div><strong>没有找到</strong>与“' + esc(q) + '”匹配的机构或平台。</div><ul><li>试试只输入机构简称，如“物理所”“药物所”。</li><li>或按城市查找：北京、上海、合肥、西安。</li><li>也可在<a href="/#channels">机构分类</a>里逐类浏览。</li></ul>';
+    }
+    fb.classList.add('show');
+  }
+  if(input){
+    input.addEventListener('input', runSearch);
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ input.value=''; fb.classList.remove('show'); fb.innerHTML=''; }
+    });
+  }
+  document.addEventListener('click', function(e){
+    if(fb && fb.classList.contains('show') && !e.target.closest('.search-wrap')){ fb.classList.remove('show'); }
+  });
+
+  /* 侧栏导航滚动高亮 */
+  var sideLinks = [].slice.call(document.querySelectorAll('.side-nav a'));
+  if(sideLinks.length && 'IntersectionObserver' in window){
+    var map = {};
+    sideLinks.forEach(function(a){
+      var id = a.getAttribute('href').split('#')[1];
+      if(id){ var el = document.getElementById(id); if(el) map[id] = a; }
+    });
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          sideLinks.forEach(function(a){ a.classList.remove('active'); });
+          var a = map[en.target.id];
+          if(a) a.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-120px 0px -60% 0px', threshold:0});
+    Object.keys(map).forEach(function(id){ obs.observe(document.getElementById(id)); });
+  }
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  if(toTop){
+    var onScroll = function(){
+      if(window.scrollY > 640){ toTop.classList.add('show'); }
+      else { toTop.classList.remove('show'); }
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+    toTop.addEventListener('click', function(){
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+    });
+  }
+})();
+</script>
+</body>
+                                                                 </html>
